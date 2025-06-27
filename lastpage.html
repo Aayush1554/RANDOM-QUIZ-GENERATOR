@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Completed</title>
+  <link rel="stylesheet" href="lastpage.css">
+</head>
+<body>
+  <div class="lastpage-container">
+    <h1>🎉 You've successfully Completed the Quiz</h1>
+    <p>Thank you for completing the quiz!</p>
+    
+    <!-- Display the final score -->
+    <p>Correct Answers given: <span id="final-score">Loading...</span></p>
+    
+    <button onclick="window.location.href='index.html'">Go to INDEXpage</button>
+  </div>
+
+  <script>
+    
+    const finalScore = localStorage.getItem("finalScore");
+    document.getElementById("final-score").textContent = finalScore ? finalScore : "No score available";
+  </script>
+</body>
+</html>

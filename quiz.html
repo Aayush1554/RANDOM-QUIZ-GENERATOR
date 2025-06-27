@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/tengbao/vanta@latest/dist/vanta.net.min.js"></script>
+</head>
+<body>
+ 
+  <div id="vanta-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
+
+  <div class="quiz-container">
+    <h1>Online Quiz</h1>
+    <h2 id="user-greeting"></h2>
+    <p>Questions Remaining: <span id="questions-left"></span></p>
+
+    <div id="question-container">
+      <p id="question">Loading question...</p>
+      
+      <div id="options" class="option-container">
+        <div class="option">Option A</div>
+        <div class="option">Option B</div>
+        <div class="option">Option C</div>
+        <div class="option">Option D</div>
+      </div>
+    </div>
+
+    <div id="timer">Time Left: <span id="time">30</span> sec</div>
+    <button id="next-btn">Next</button>
+  </div>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <p id="popup-message"></p>
+      <button id="close-popup">OK</button>
+    </div>
+  </div>
+
+  <script src="sccriptfirsst.js"></script>
+
+  <script>
+    window.addEventListener('load', function () {
+      VANTA.NET({
+        el: "#vanta-background",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x3f3fff,
+        backgroundColor: 0x050505
+      });
+    });
+  </script>
+</body>
+</html>
